@@ -2,8 +2,6 @@ package fr.polytech.jeu.view;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
 
 public class Vue {
     private JFrame fenetre;
@@ -14,14 +12,8 @@ public class Vue {
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fenetre.setLocationRelativeTo(null);
 
-        // Création d'un panneau (Panel)
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-        
-        JLabel message = new JLabel("Bienvenue dans le jeu", JLabel.CENTER);
-        panel.add(message, BorderLayout.CENTER);
-
-        fenetre.add(panel);
+        // Ajout direct du texte à la fenêtre
+        fenetre.add(new JLabel("Bienvenue dans le jeu", JLabel.CENTER));
     }
 
     public void afficher() {
