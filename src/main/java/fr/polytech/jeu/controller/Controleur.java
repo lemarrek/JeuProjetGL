@@ -18,4 +18,8 @@ public class Controleur implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         // TODO: Implémenter la logique de contrôle ici
     }
+
+    public void demarrer() {
+        // TODO Auto-generated method stub
+    }
 }
