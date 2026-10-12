@@ -1,5 +1,7 @@
 package fr.polytech.jeu.view;
 
+import java.awt.event.KeyListener;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -18,5 +20,9 @@ public class Vue {
 
     public void afficher() {
         fenetre.setVisible(true);
+    }
+
+    public void addKeyListener(KeyListener listener) {
+        fenetre.addKeyListener(listener);
     }
 }

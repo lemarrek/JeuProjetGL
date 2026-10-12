@@ -1,11 +1,11 @@
 package fr.polytech.jeu.controller;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
 import fr.polytech.jeu.model.Model;
 import fr.polytech.jeu.view.Vue;
 
-public class Controleur implements ActionListener {
+public class Controleur implements KeyListener {
     private Model model;
     private Vue vue;
 
@@ -14,12 +14,42 @@ public class Controleur implements ActionListener {
         this.vue = vue;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        // TODO: Implémenter la logique de contrôle ici
+    public void demarrer() {
+        vue.addKeyListener(this);
     }
 
-    public void demarrer() {
-        // TODO Auto-generated method stub
+    @Override
+    public void keyPressed(KeyEvent e) {
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_Z:
+            case KeyEvent.VK_UP:
+                System.out.println("Haut");
+                break;
+
+            case KeyEvent.VK_S:
+            case KeyEvent.VK_DOWN:
+                System.out.println("Bas");
+                break;
+
+            case KeyEvent.VK_Q:
+            case KeyEvent.VK_LEFT:
+                System.out.println("Gauche");
+                break;
+
+            case KeyEvent.VK_D:
+            case KeyEvent.VK_RIGHT:
+                System.out.println("Droite");
+                break;
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        
     }
 }
