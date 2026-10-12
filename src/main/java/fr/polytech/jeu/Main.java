@@ -10,7 +10,6 @@ public class Main {
             Vue vue = new Vue();
             vue.afficher();
 			System.out.println("Start game...");
-			Game game = new Game();
         });
     }
 }
