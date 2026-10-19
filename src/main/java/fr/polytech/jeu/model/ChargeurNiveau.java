@@ -59,7 +59,6 @@ public final class ChargeurNiveau {
             case ' ':
             case '.':
                 return null; // case vide
-            case '#': return new Mur(x, y);
             case 'J': return new Joueur(x, y);
             case 'P': return new Porte(x, y);
             default:

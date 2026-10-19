@@ -32,4 +32,13 @@ public class Case {
         }
         return false;
     }
+
+    public boolean contient(Class<? extends Element> type) {
+        for (Element e : elements) {
+            if (type.isInstance(e)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

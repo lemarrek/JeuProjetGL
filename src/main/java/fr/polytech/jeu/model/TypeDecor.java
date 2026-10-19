@@ -3,7 +3,8 @@ package fr.polytech.jeu.model;
 public enum TypeDecor {
     FEUILLE('F', false),
     ARBRE('T', false),
-    NUAGE('N', false);
+    NUAGE('N', false),
+    MUR('#', true);
 
     private final char symbole;
     private final boolean bloquant;
