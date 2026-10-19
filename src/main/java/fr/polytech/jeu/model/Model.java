@@ -2,46 +2,21 @@ package fr.polytech.jeu.model;
 
 public class Model {
 
-    private static final String[] CARTE_TEST = {
-        "####################",
-        "#..................#",
-        "#..................#",
-        "#.......###........#",
-        "#..................#",
-        "#.J.........#......#",
-        "####################",
-    };
+    private static final String MAP1 = "/maps/map1.txt";
 
-    private final Grille grille;
+    private Grille grille;
     private Joueur joueur;
 
     public Model() {
-        this.grille = creerGrille(CARTE_TEST);
-        if (joueur == null) {
-            throw new IllegalStateException("La carte ne contient pas de joueur (J)");
-        }
+        chargerNiveau(MAP1);
     }
 
-    /** Construit la grille à partir d'une carte texte (sera déplacé dans un ChargeurNiveau). */
-    private Grille creerGrille(String[] carte) {
-        Grille g = new Grille(carte[0].length(), carte.length);
-        for (int y = 0; y < carte.length; y++) {
-            for (int x = 0; x < carte[y].length(); x++) {
-                switch (carte[y].charAt(x)) {
-                    case '#':
-                        g.ajouter(new Mur(x, y));
-                        break;
-                    case 'J':
-                        joueur = new Joueur(x, y);
-                        g.ajouter(joueur);
-                        break;
-                    default:
-                        break; 
-                }
-            }
-        }
-        return g;
+
+    public void chargerNiveau(String chemin) {
+        this.grille = ChargeurNiveau.charger(chemin);
+        this.joueur = grille.trouver(Joueur.class).get(0); 
     }
+
 
     public boolean deplacerJoueur(Direction direction) {
         joueur.setRegard(direction);
