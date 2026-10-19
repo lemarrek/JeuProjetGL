@@ -1,7 +1,9 @@
 package fr.polytech.jeu.controller;
 
-import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import fr.polytech.jeu.model.Direction;
 import fr.polytech.jeu.model.Model;
 import fr.polytech.jeu.view.Vue;
 
@@ -16,6 +18,7 @@ public class Controleur implements KeyListener {
 
     public void demarrer() {
         vue.addKeyListener(this);
+        System.out.println(model.getGrille()); // affichage console provisoire
     }
 
     @Override
@@ -33,14 +36,15 @@ public class Controleur implements KeyListener {
 
             case KeyEvent.VK_Q:
             case KeyEvent.VK_LEFT:
-                System.out.println("Gauche");
+                model.deplacerJoueur(Direction.GAUCHE);
                 break;
 
             case KeyEvent.VK_D:
             case KeyEvent.VK_RIGHT:
-                System.out.println("Droite");
+                model.deplacerJoueur(Direction.DROITE);
                 break;
         }
+        System.out.println(model.getGrille()); // provisoire, en attendant la vraie vue
     }
 
     @Override
