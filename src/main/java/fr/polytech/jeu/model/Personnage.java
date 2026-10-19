@@ -1,8 +1,6 @@
 package fr.polytech.jeu.model;
 
-/**
- * Base commune au joueur et aux PNJ.
- */
+
 public abstract class Personnage extends Element {
     private int pointsDeVie;
 
@@ -25,6 +23,6 @@ public abstract class Personnage extends Element {
 
     @Override
     public boolean estBloquant() {
-        return false; // on peut traverser un personnage (à revoir pour les PNJ hostiles)
+        return false; 
     }
 }
