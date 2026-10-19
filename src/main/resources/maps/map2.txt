@@ -9,7 +9,7 @@
 #      NNN                                       NN                                #
 #                                                                                  #
 #         FFF                         FFFF                           FFF           #
-#        FFTFF                      FFFFFFF                       FFFFFFFTFF       #
-#          T    R                      TFF            R                T           #
-# J        T    R          R            T            RRR               T           P
+#        FFTFF                      FFFFFFF         RR            FFFFFFFTFF       #
+#          T    R                      TFF         RRRRR               T           #
+# J        T    R          R            T            RRRR              T           P
 ####################################################################################
