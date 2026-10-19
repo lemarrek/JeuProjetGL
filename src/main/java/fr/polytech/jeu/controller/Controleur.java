@@ -3,6 +3,8 @@ package fr.polytech.jeu.controller;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.Timer;
+
 import fr.polytech.jeu.model.Direction;
 import fr.polytech.jeu.model.Model;
 import fr.polytech.jeu.view.Vue;
@@ -11,14 +13,20 @@ public class Controleur implements KeyListener {
     private Model model;
     private Vue vue;
 
+    private static final int DELAI_TIC_MS = 120;
+    private final Timer boucleDeJeu;
+
+
     public Controleur(Model model, Vue vue) {
         this.model = model;
         this.vue = vue;
+        this.boucleDeJeu = new Timer(DELAI_TIC_MS, e -> model.tic());
     }
 
     public void demarrer() {
         vue.addKeyListener(this);
         System.out.println(model.getGrille()); // affichage console provisoire
+        boucleDeJeu.start();
     }
 
     @Override
@@ -40,7 +48,7 @@ public class Controleur implements KeyListener {
                 break;
             case KeyEvent.VK_SPACE:
                 if (model.getProfondeur()>=1){
-                model.deplacerJoueur(Direction.HAUT);
+                model.sauter();
             }
                 break;
             
