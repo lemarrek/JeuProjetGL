@@ -1,0 +1,15 @@
+####################################################################################
+#                                                      NNNN                        #
+#                      NN                           NNNNNNNNN                      #
+#                    NNNNNN                     NNNNNNNNNNNNNNNNN                  #
+#                                                    NNNNNNNN                      #
+#                                                                             NN   #
+#       NNN                                       NNN                       NN     #
+#     NNNNNN                                   NNNNNNN                             #
+#      NNN                                       NN                                #
+#                                                                                  #
+#         FFF                         FFFF                           FFF           #
+#        FFTFF                      FFFFFFF                       FFFFFFFTFF       #
+#          T    R                      TFF            R                T           #
+# J        T    R          R            T            RRR               T           P
+####################################################################################

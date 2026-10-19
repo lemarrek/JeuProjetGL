@@ -113,6 +113,7 @@ public class PanneauJeu extends JPanel {
                 dessinerLettre(g, e.toString(), couleurDe(e), px, py);
                 break;
             case 1:
+                dessinerLettre(g, e.toString(), couleurDe(e), px, py);
                 break;
 
             case 3:
