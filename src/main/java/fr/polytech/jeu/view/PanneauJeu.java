@@ -113,7 +113,7 @@ public class PanneauJeu extends JPanel {
                 dessinerLettre(g, e.toString(), couleurDe(e), px, py);
                 break;
             case 1:
-                dessinerLettre(g, e.toString(), couleurDe(e), px, py);
+                dessinerFormBasiqueLvl2(g, e, px, py);
                 break;
 
             case 3:
@@ -142,4 +142,42 @@ public class PanneauJeu extends JPanel {
         return Color.WHITE;
     }
 
+
+    
+    private void dessinerFormBasiqueLvl2(Graphics2D g, Element e, int px, int py) {
+        switch (e.toString()) {
+            case "J":
+                g.setColor(new Color(230, 90, 90));
+                g.fillOval(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            case "P":
+                g.setColor(new Color(255, 255, 20));
+                g.fillRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            case "#":
+                g.setColor(Color.BLACK);
+                g.fillRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            case "F":
+                g.setColor(Color.GREEN);
+                g.fillRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            case "T":
+                g.setColor(new Color(137, 81, 41));
+                g.fillRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            case "N":
+                g.setColor(Color.WHITE);
+                g.fillRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            case "R":
+                g.setColor(new Color(85, 85, 85));
+                g.fillRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+            default:
+                g.setColor(Color.WHITE);
+                g.drawRect(px + 5, py + 5, TAILLE_CASE - 10, TAILLE_CASE - 10);
+                break;
+        }
+    }
 }

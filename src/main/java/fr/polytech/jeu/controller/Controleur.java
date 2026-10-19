@@ -38,7 +38,13 @@ public class Controleur implements KeyListener {
             case KeyEvent.VK_LEFT:
                 model.deplacerJoueur(Direction.GAUCHE);
                 break;
-
+            case KeyEvent.VK_SPACE:
+                if (model.getProfondeur()>=1){
+                model.deplacerJoueur(Direction.HAUT);
+            }
+                break;
+            
+            
             case KeyEvent.VK_D:
             case KeyEvent.VK_RIGHT:
                 model.deplacerJoueur(Direction.DROITE);

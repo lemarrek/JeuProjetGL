@@ -50,7 +50,7 @@ public class Model {
     public boolean deplacerJoueur(Direction direction) {
         joueur.setRegard(direction);
         int nx = joueur.getX() + direction.getDx();
-        int ny = joueur.getY();
+        int ny = joueur.getY() + direction.getDy();
         if (grille.estBloquante(nx, ny)) {
             return false;
         }
