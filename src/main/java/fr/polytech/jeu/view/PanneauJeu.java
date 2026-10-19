@@ -115,8 +115,7 @@ public class PanneauJeu extends JPanel {
             case 1:
                 dessinerFormBasiqueLvl2(g, e, px, py);
                 break;
-
-            case 3:
+            case 2:
                 break;
             case 4:
                 break;
@@ -143,7 +142,7 @@ public class PanneauJeu extends JPanel {
     }
 
 
-    
+
     private void dessinerFormBasiqueLvl2(Graphics2D g, Element e, int px, int py) {
         switch (e.toString()) {
             case "J":
@@ -180,4 +179,7 @@ public class PanneauJeu extends JPanel {
                 break;
         }
     }
+
 }
+
+
