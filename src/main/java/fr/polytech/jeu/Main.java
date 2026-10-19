@@ -11,7 +11,8 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             System.out.println("Start game...");
             Model model = new Model();
-            Vue vue = new Vue();
+            Vue vue = new Vue(model);
+            model.ajouterObservateur(vue);
             Controleur controleur = new Controleur(model, vue);
             vue.afficher();
             controleur.demarrer();

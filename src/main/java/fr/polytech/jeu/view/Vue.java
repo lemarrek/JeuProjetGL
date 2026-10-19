@@ -3,19 +3,22 @@ package fr.polytech.jeu.view;
 import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
-public class Vue {
+import fr.polytech.jeu.model.Model;
+import fr.polytech.jeu.model.Observateur;
+
+public class Vue implements Observateur{
     private JFrame fenetre;
+    private final PanneauJeu panneau;
 
-    public Vue() {
-        fenetre = new JFrame("Projet GL");
-        fenetre.setSize(800, 600);
+    public Vue(Model model) {
+        fenetre = new JFrame("1ception");
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fenetre.setLocationRelativeTo(null);
 
-        // Ajout direct du texte à la fenêtre
-        fenetre.add(new JLabel("Bienvenue dans le jeu", JLabel.CENTER));
+        panneau = new PanneauJeu(model);
+        fenetre.add(panneau);
+        fenetre.pack(); 
+        fenetre.setLocationRelativeTo(null);
     }
 
     public void afficher() {
@@ -24,5 +27,10 @@ public class Vue {
 
     public void addKeyListener(KeyListener listener) {
         fenetre.addKeyListener(listener);
+    }
+
+    @Override 
+    public void miseAJour() {
+        panneau.repaint();
     }
 }
