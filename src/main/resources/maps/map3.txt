@@ -3,13 +3,13 @@
 #                      NN                           NNNNNNNNN                                        NNNN                                    NN              NNNNN     #
 #                    NNNNNN                     NNNNNNNNNNNNNNNNN                                  NNNNNNN               NNNNN                           NN  NNNN      #
 #                                                    NNNNNNNN                                                           NNNNNNN                            NNNN        #
-#                                                                             NN                                           NNN                                         #
-#       NNN                                       NNN                       NN                                                           NN                            #
-#     NNNNNN                                   NNNNNNN                                                                                                                 #
-#      NNN                                       NN                                                                                                                    #
-#                                                                                                   FFFFF                                                              #
-#         FFF                         FFFF                           FFF                           FF T FF         FFFFF                           FFF                 #
-#        FFTFF                      FFFFFFF         RR            FFFFFFFTFF                        F T F         RRRRRRR                         FFTFF                #
-#          T    R                      TFF         RRRRR               T                              T            T   T         R       R          T                  #
-# J        T    R          R            T            RRRR              T                              T            T B T        RR       RR         T                  P
+#                                                                             NN                                           NNN                                         P
+#       NNN                                       NNN                       NN                                                           NN                        NN  #
+#     NNNNNN                                   NNNNNNN                                                                                                       NN        #
+#      NNN                                       NN                                                                                                        NNNNN       #
+#                                                                                                   FFFFF                                                NNNNN         #
+#         FFF                         FFFF                           FFF                           FF T FF         FFFFF                         FFFFF                 #
+#        FFTFF                      FFFFFFF         RR            FFFFFFFTFF                        F T F         RRRRRRR                      FFFFFTFF                #
+#          T    R                      TFF         RRRRR               T                              T            T   T         R       RRRR       T                  #
+# J        T    R          R            T            RRRR              T                              T            T B T        RR       RR         T                  #
 ########################################################################################################################################################################
