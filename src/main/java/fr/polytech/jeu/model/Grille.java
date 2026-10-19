@@ -1,5 +1,8 @@
 package fr.polytech.jeu.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Grille {
     private final int largeur;
@@ -48,11 +51,25 @@ public class Grille {
         getCase(e.getX(), e.getY()).retirer(e);
     }
 
-
     void deplacer(Element e, int nouveauX, int nouveauY) {
         getCase(e.getX(), e.getY()).retirer(e);
         e.setPosition(nouveauX, nouveauY);
         getCase(nouveauX, nouveauY).ajouter(e);
+    }
+
+
+    public <T extends Element> List<T> trouver(Class<T> type) {
+        List<T> resultat = new ArrayList<>();
+        for (int y = 0; y < hauteur; y++) {
+            for (int x = 0; x < largeur; x++) {
+                for (Element e : cases[y][x].getElements()) {
+                    if (type.isInstance(e)) {
+                        resultat.add(type.cast(e));
+                    }
+                }
+            }
+        }
+        return resultat;
     }
 
     @Override
