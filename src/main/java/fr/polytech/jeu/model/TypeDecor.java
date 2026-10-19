@@ -4,6 +4,7 @@ public enum TypeDecor {
     FEUILLE('F', false),
     ARBRE('T', false),
     NUAGE('N', false),
+    ROCHER('R', true),
     MUR('#', true);
 
     private final char symbole;
